@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: Scene1.ma
-//Last modified: Mon, Feb 10, 2025 03:52:01 PM
+//Last modified: Mon, Feb 10, 2025 03:56:49 PM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.3.1.1";
@@ -10,18 +10,18 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202304191415-7fa20164c6";
 fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 22621)";
-fileInfo "UUID" "CA622F57-493A-B6A2-A3ED-DBB2852C2954";
+fileInfo "UUID" "E76F6F15-4059-3B53-C6A7-C19161C1A3C1";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "FFA5D1A0-48B4-5A02-9A9B-808983290148";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 3.1598784558072039 3.7395184594994544 18.41022685990875 ;
-	setAttr ".r" -type "double3" -6.9383527344439715 729.39999999991267 -1.0074512302659692e-16 ;
+	setAttr ".t" -type "double3" 30.400813806682585 12.189563734469163 21.036261555740246 ;
+	setAttr ".r" -type "double3" -17.738352734468354 773.79999999965605 2.6926211987219035e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "50B234C2-423A-4395-4B6C-0595F9D996D9";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 18.582495938950871;
+	setAttr ".coi" 38.476365445204436;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -4427,8 +4427,8 @@ createNode mesh -n "polySurfaceShape3" -p "|TileRowsGroup|TileRow06|Tile06";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "Table";
 	rename -uid "276FC445-4ACF-4097-3B83-AEB5D90A5C33";
-	setAttr ".rp" -type "double3" 1.800000011920929 0.1500000059604647 2.2000000178813934 ;
-	setAttr ".sp" -type "double3" 1.800000011920929 0.15000000596046514 2.2000000178813934 ;
+	setAttr ".rp" -type "double3" 1.800000011920929 0.1500000059604647 1.2000000178813934 ;
+	setAttr ".sp" -type "double3" 1.800000011920929 0.15000000596046514 1.2000000178813934 ;
 createNode mesh -n "TableShape" -p "Table";
 	rename -uid "C7435207-49F6-1B62-2576-739D8CA925D8";
 	setAttr -k off ".v";
@@ -4468,21 +4468,23 @@ createNode mesh -n "TableShape" -p "Table";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 55 ".pt[0:54]" -type "float3"  0.5 1.9000001 2 1.5 1.9000001 
-		2 0.5 1.1500001 2 1.5 1.1500001 2 0.5 1.1500001 4.4408921e-16 1.5 1.1500001 4.4408921e-16 
-		0.5 1.9000001 4.4408921e-16 1.5 1.9000001 4.4408921e-16 1.5 1.9000001 1 0.5 1.9000001 
-		1 0.5 1.9000001 1.7 0.5 1.9000001 1.9 1.5 1.9000001 1.7 1.5 1.9000001 1.9 1.5 1.9000001 
-		0.10000002 1.5 1.9000001 0.30000001 0.5 1.9000001 0.10000002 0.5 1.9000001 0.30000001 
-		1 1.9000001 1.9 1 1.9000001 1.7 1 1.9000001 1 1 1.9000001 0.30000001 1 1.9000001 
-		0.10000002 0.55000001 1.9 1.9 0.64999998 1.9 1.9 0.64999998 1.9 1.7 0.55000001 1.9 
-		1.7 1.35 1.9 1.9 1.45 1.9 1.9 1.45 1.9 1.7 1.35 1.9 1.7 1.45 1.9 0.10000002 1.35 
-		1.9 0.10000002 1.35 1.9 0.30000001 1.45 1.9 0.30000001 0.64999998 1.9 0.10000002 
-		0.55000001 1.9 0.10000002 0.55000001 1.9 0.30000001 0.64999998 1.9 0.30000001 1.35 
-		4.8166671 0.30000001 1.35 4.8166671 0.10000002 1.45 4.8166671 0.10000002 1.45 4.8166671 
-		0.30000001 0.55000001 4.8166671 1.9 0.55000001 4.8166671 1.7 0.64999998 4.8166671 
-		1.7 0.64999998 4.8166671 1.9 1.35 4.8166671 1.7 1.35 4.8166671 1.9 1.45 4.8166671 
-		1.7 1.45 4.8166671 1.9 0.55000001 4.8166671 0.10000002 0.55000001 4.8166671 0.30000001 
-		0.64999998 4.8166671 0.10000002 0.64999998 4.8166671 0.30000001;
+	setAttr -s 55 ".pt[0:54]" -type "float3"  0.5 1.9000001 1 1.5 1.9000001 
+		1 0.5 1.1500001 1 1.5 1.1500001 1 0.5 1.1500001 -1 1.5 1.1500001 -1 0.5 1.9000001 
+		-1 1.5 1.9000001 -1 1.5 1.9000001 0 0.5 1.9000001 0 0.5 1.9000001 0.70000005 0.5 
+		1.9000001 0.89999998 1.5 1.9000001 0.70000005 1.5 1.9000001 0.89999998 1.5 1.9000001 
+		-0.89999998 1.5 1.9000001 -0.69999999 0.5 1.9000001 -0.89999998 0.5 1.9000001 -0.69999999 
+		1 1.9000001 0.89999998 1 1.9000001 0.70000005 1 1.9000001 0 1 1.9000001 -0.69999999 
+		1 1.9000001 -0.89999998 0.55000001 1.9 0.89999998 0.64999998 1.9 0.89999998 0.64999998 
+		1.9 0.70000005 0.55000001 1.9 0.70000005 1.35 1.9 0.89999998 1.45 1.9 0.89999998 
+		1.45 1.9 0.70000005 1.35 1.9 0.70000005 1.45 1.9 -0.89999998 1.35 1.9 -0.89999998 
+		1.35 1.9 -0.69999999 1.45 1.9 -0.69999999 0.64999998 1.9 -0.89999998 0.55000001 1.9 
+		-0.89999998 0.55000001 1.9 -0.69999999 0.64999998 1.9 -0.69999999 1.35 4.8166671 
+		-0.69999999 1.35 4.8166671 -0.89999998 1.45 4.8166671 -0.89999998 1.45 4.8166671 
+		-0.69999999 0.55000001 4.8166671 0.89999998 0.55000001 4.8166671 0.70000005 0.64999998 
+		4.8166671 0.70000005 0.64999998 4.8166671 0.89999998 1.35 4.8166671 0.70000005 1.35 
+		4.8166671 0.89999998 1.45 4.8166671 0.70000005 1.45 4.8166671 0.89999998 0.55000001 
+		4.8166671 -0.89999998 0.55000001 4.8166671 -0.69999999 0.64999998 4.8166671 -0.89999998 
+		0.64999998 4.8166671 -0.69999999;
 	setAttr -s 55 ".vt[0:54]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
 		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5 0.5 -0.5 0 -0.5 -0.5 0 -0.5 -0.5 0.34999999
 		 -0.5 -0.5 0.44999996 0.5 -0.5 0.34999999 0.5 -0.5 0.44999996 0.5 -0.5 -0.44999999
@@ -11101,12 +11103,15 @@ createNode mesh -n "FridgeShape" -p "Fridge";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "ChairGroup01";
 	rename -uid "21213C6C-4355-892B-74BF-DBAB7FD0EE11";
-	setAttr ".rp" -type "double3" -0.15224772070254758 1.0624999668166466 0.46000415891699425 ;
-	setAttr ".sp" -type "double3" -0.15224772070254758 1.0624999668166466 0.46000415891699425 ;
+	setAttr ".t" -type "double3" 1.1495808816364752 0 -2.0834220909543353 ;
+	setAttr ".r" -type "double3" 0 -90 0 ;
+	setAttr ".rp" -type "double3" -0.15224772691726685 1.0624999105930328 0.46000418066978455 ;
+	setAttr ".rpt" -type "double3" -1.5538071274079357e-08 0 -2.7967509419468684e-08 ;
+	setAttr ".sp" -type "double3" -0.15224772691726685 1.0624999105930328 0.46000418066978455 ;
 createNode transform -n "ChairSeat" -p "ChairGroup01";
 	rename -uid "BDB68C22-498B-AD14-163D-AF8D0AC86C4F";
-	setAttr ".rp" -type "double3" 6.2147192669836926e-09 0.9 0.46000410527281393 ;
-	setAttr ".sp" -type "double3" 6.2147192669836926e-09 0.9 0.46000410527281393 ;
+	setAttr ".rp" -type "double3" 6.2147191837169657e-09 0.9 0.46000410527281388 ;
+	setAttr ".sp" -type "double3" 6.2147191837169657e-09 0.9 0.46000410527281388 ;
 createNode mesh -n "ChairSeatShape" -p "|ChairGroup01|ChairSeat";
 	rename -uid "89A67EB9-488D-6E68-6D9F-7D9826B6FC98";
 	setAttr -k off ".v";
@@ -11297,8 +11302,8 @@ createNode mesh -n "ChairSeatShape" -p "|ChairGroup01|ChairSeat";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "ChairLeg01" -p "ChairGroup01";
 	rename -uid "A0853AAB-42F8-9E65-3CCE-3D9D224B55E6";
-	setAttr ".rp" -type "double3" 0.25000000621471929 0.8250075578689573 0.12294453166952465 ;
-	setAttr ".sp" -type "double3" 0.25000000621471929 0.8250075578689573 0.12294453166952465 ;
+	setAttr ".rp" -type "double3" 0.25000000621471918 0.8250075578689573 0.12294453166952457 ;
+	setAttr ".sp" -type "double3" 0.25000000621471918 0.8250075578689573 0.12294453166952457 ;
 createNode mesh -n "ChairLegShape1" -p "|ChairGroup01|ChairLeg01";
 	rename -uid "21629D9B-4B10-F4C6-C562-A1812D237B60";
 	setAttr -k off ".v";
@@ -11405,8 +11410,8 @@ createNode mesh -n "ChairLegShape1" -p "|ChairGroup01|ChairLeg01";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "ChairLeg02" -p "ChairGroup01";
 	rename -uid "D20D645B-4927-CFDB-435C-F59E95D4DC0F";
-	setAttr ".rp" -type "double3" 0.25000000621471929 0.8250075578689573 0.79794453166952461 ;
-	setAttr ".sp" -type "double3" 0.25000000621471929 0.8250075578689573 0.79794453166952461 ;
+	setAttr ".rp" -type "double3" 0.25000000621471918 0.8250075578689573 0.79794453166952461 ;
+	setAttr ".sp" -type "double3" 0.25000000621471918 0.8250075578689573 0.79794453166952461 ;
 createNode mesh -n "ChairLegShape2" -p "|ChairGroup01|ChairLeg02";
 	rename -uid "ED32464F-4FB8-A98B-10DD-51B9E92D05AF";
 	setAttr -k off ".v";
@@ -11513,8 +11518,8 @@ createNode mesh -n "ChairLegShape2" -p "|ChairGroup01|ChairLeg02";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "ChairLeg03" -p "ChairGroup01";
 	rename -uid "396892E0-4D2E-F957-E7B2-55A81CE97BA3";
-	setAttr ".rp" -type "double3" -0.29999999378528075 0.8250075578689573 0.79794453166952461 ;
-	setAttr ".sp" -type "double3" -0.29999999378528075 0.8250075578689573 0.79794453166952461 ;
+	setAttr ".rp" -type "double3" -0.29999999378528064 0.8250075578689573 0.79794453166952461 ;
+	setAttr ".sp" -type "double3" -0.29999999378528064 0.8250075578689573 0.79794453166952461 ;
 createNode mesh -n "ChairLegShape3" -p "|ChairGroup01|ChairLeg03";
 	rename -uid "1D385B81-40E2-9431-377D-5FB1A7C9411A";
 	setAttr -k off ".v";
@@ -11621,8 +11626,8 @@ createNode mesh -n "ChairLegShape3" -p "|ChairGroup01|ChairLeg03";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "ChairLeg04" -p "ChairGroup01";
 	rename -uid "8C87A5F7-4F9C-2D70-A707-7A87EAE19DC8";
-	setAttr ".rp" -type "double3" -0.29999999378528075 0.8250075578689573 0.12294453166952465 ;
-	setAttr ".sp" -type "double3" -0.29999999378528075 0.8250075578689573 0.12294453166952465 ;
+	setAttr ".rp" -type "double3" -0.29999999378528064 0.8250075578689573 0.12294453166952457 ;
+	setAttr ".sp" -type "double3" -0.29999999378528064 0.8250075578689573 0.12294453166952457 ;
 createNode mesh -n "ChairLegShape4" -p "|ChairGroup01|ChairLeg04";
 	rename -uid "214EE9D7-49EC-3C6D-2878-9FAF3E25F3E8";
 	setAttr -k off ".v";
@@ -11730,12 +11735,14 @@ createNode mesh -n "ChairLegShape4" -p "|ChairGroup01|ChairLeg04";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "ChairGroup02";
 	rename -uid "13798D6F-4B99-4F6D-27C8-7E8ECB0728BF";
+	setAttr ".t" -type "double3" 1.4395316505491236 0 -0.55 ;
+	setAttr ".r" -type "double3" 0 90 0 ;
 	setAttr ".rp" -type "double3" 0.0078014793554358197 0.89296345766633756 1.9899959087371826 ;
 	setAttr ".sp" -type "double3" 0.0078014793554358197 0.89296345766633756 1.9899959087371826 ;
 createNode transform -n "ChairSeat" -p "ChairGroup02";
 	rename -uid "241249D4-41C7-CD39-BB24-02B1470FEB31";
-	setAttr ".rp" -type "double3" 6.2147192669836926e-09 0.9 1.5399959355592729 ;
-	setAttr ".sp" -type "double3" 6.2147192669836926e-09 0.9 1.5399959355592729 ;
+	setAttr ".rp" -type "double3" 6.2147191837169657e-09 0.9 1.5399959355592729 ;
+	setAttr ".sp" -type "double3" 6.2147191837169657e-09 0.9 1.5399959355592729 ;
 createNode mesh -n "ChairSeatShape" -p "|ChairGroup02|ChairSeat";
 	rename -uid "6F1D5D37-40D8-2706-515E-EC940AC405B5";
 	setAttr -k off ".v";
@@ -11925,8 +11932,8 @@ createNode mesh -n "ChairSeatShape" -p "|ChairGroup02|ChairSeat";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "ChairLeg01" -p "ChairGroup02";
 	rename -uid "CC4F41CF-4077-0B2E-4881-B5B840CC7C15";
-	setAttr ".rp" -type "double3" 0.25000000621471929 0.8250075578689573 1.2029363619559836 ;
-	setAttr ".sp" -type "double3" 0.25000000621471929 0.8250075578689573 1.2029363619559836 ;
+	setAttr ".rp" -type "double3" 0.25000000621471918 0.8250075578689573 1.2029363619559836 ;
+	setAttr ".sp" -type "double3" 0.25000000621471918 0.8250075578689573 1.2029363619559836 ;
 createNode mesh -n "ChairLegShape1" -p "|ChairGroup02|ChairLeg01";
 	rename -uid "1031BAB6-40E3-6A66-D82B-C9B58F8442F8";
 	setAttr -k off ".v";
@@ -12033,8 +12040,8 @@ createNode mesh -n "ChairLegShape1" -p "|ChairGroup02|ChairLeg01";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "ChairLeg02" -p "ChairGroup02";
 	rename -uid "CFFC82AA-4798-9855-4FA8-DCA6084C7BA9";
-	setAttr ".rp" -type "double3" 0.25000000621471929 0.8250075578689573 1.8779363619559835 ;
-	setAttr ".sp" -type "double3" 0.25000000621471929 0.8250075578689573 1.8779363619559835 ;
+	setAttr ".rp" -type "double3" 0.25000000621471918 0.8250075578689573 1.8779363619559835 ;
+	setAttr ".sp" -type "double3" 0.25000000621471918 0.8250075578689573 1.8779363619559835 ;
 createNode mesh -n "ChairLegShape2" -p "|ChairGroup02|ChairLeg02";
 	rename -uid "3F265145-4AE6-6C6F-6C0A-3E973D2E6DC4";
 	setAttr -k off ".v";
@@ -12141,8 +12148,8 @@ createNode mesh -n "ChairLegShape2" -p "|ChairGroup02|ChairLeg02";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "ChairLeg03" -p "ChairGroup02";
 	rename -uid "797853DE-4370-C17C-FE18-77930AB6C596";
-	setAttr ".rp" -type "double3" -0.29999999378528075 0.8250075578689573 1.8779363619559835 ;
-	setAttr ".sp" -type "double3" -0.29999999378528075 0.8250075578689573 1.8779363619559835 ;
+	setAttr ".rp" -type "double3" -0.29999999378528064 0.8250075578689573 1.8779363619559835 ;
+	setAttr ".sp" -type "double3" -0.29999999378528064 0.8250075578689573 1.8779363619559835 ;
 createNode mesh -n "ChairLegShape3" -p "|ChairGroup02|ChairLeg03";
 	rename -uid "E142E1E8-4F8B-693E-2942-21B7E291E49C";
 	setAttr -k off ".v";
@@ -12249,8 +12256,8 @@ createNode mesh -n "ChairLegShape3" -p "|ChairGroup02|ChairLeg03";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "ChairLeg04" -p "ChairGroup02";
 	rename -uid "E478E460-4705-585E-BD5B-BEA01F09CD8C";
-	setAttr ".rp" -type "double3" -0.29999999378528075 0.8250075578689573 1.2029363619559836 ;
-	setAttr ".sp" -type "double3" -0.29999999378528075 0.8250075578689573 1.2029363619559836 ;
+	setAttr ".rp" -type "double3" -0.29999999378528064 0.8250075578689573 1.2029363619559836 ;
+	setAttr ".sp" -type "double3" -0.29999999378528064 0.8250075578689573 1.2029363619559836 ;
 createNode mesh -n "ChairLegShape4" -p "|ChairGroup02|ChairLeg04";
 	rename -uid "FE403751-42EC-50B0-5758-9599B5F03877";
 	setAttr -k off ".v";
